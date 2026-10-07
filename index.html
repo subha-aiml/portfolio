@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="iiR_kViLS0DUG5spAHIsnPe19jZeAeJY-BURvLSzh_g" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subhajit Kundu - Personal Portfolio</title>
+    <title>Subhajit Kundu | AI/ML Student Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -219,6 +218,126 @@
             box-shadow: 0 4px 12px rgba(245, 87, 108, 0.3);
         }
 
+
+        /* Education & Projects */
+        .education, .projects {
+            padding: 5rem 2rem;
+            margin: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .education h2, .projects h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .education-card {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-left: 5px solid #667eea;
+            background: linear-gradient(135deg, rgba(102,126,234,.08), rgba(240,147,251,.08));
+            border-radius: 12px;
+        }
+
+        .education-card h3 {
+            color: #667eea;
+            margin-bottom: .5rem;
+        }
+
+        .education-card p {
+            color: #666;
+            margin: .35rem 0;
+        }
+
+        .project-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            border: 2px solid rgba(102,126,234,.15);
+            transition: all .3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(102,126,234,.2);
+            border-color: rgba(102,126,234,.4);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tech span {
+            background: rgba(102,126,234,.1);
+            color: #667eea;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: .8rem;
+            font-weight: 600;
+        }
+
+        .project-link {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .project-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102,126,234,.35);
+        }
+
+        .resume-button {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 12px 25px;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .resume-button:hover {
+            background: white;
+            color: #667eea;
+        }
+
         /* Contact Section */
         .contact {
             padding: 5rem 2rem;
@@ -338,6 +457,52 @@
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
         }
 
+
+        /* Social Media */
+        .social-connect {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .social-connect h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 22px;
+            border-radius: 30px;
+            background: white;
+            border: 2px solid rgba(102,126,234,.25);
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,.08);
+            transition: all .3s ease;
+        }
+
+        .social-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(102,126,234,.2);
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .social-icon {
+            font-size: 1.3rem;
+        }
+
         /* Footer */
         footer {
             background: rgba(0, 0, 0, 0.8);
@@ -389,8 +554,20 @@
             }
 
             .about h2,
-            .contact h2 {
+            .contact h2,
+            .education h2,
+            .projects h2 {
                 font-size: 2rem;
+            }
+
+            .education, .projects, .about, .contact {
+                margin: 1rem;
+                padding: 3rem 1.2rem;
+            }
+
+            .resume-button {
+                margin-left: 0;
+                margin-top: 10px;
             }
         }
     </style>
@@ -401,6 +578,8 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -409,9 +588,10 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Subhajit Kundu</h1>
-            <p>AIML Student | Programmer | Tech Enthusiast</p>
-            <small style="display: block; margin-top: 1rem; font-size: 1rem; opacity: 0.9;">Hladia Institute of Technology</small>
-            <a href="#contact" class="cta-button">Get In Touch</a>
+            <p>B.Tech AI/ML Student | Python & C Programmer | Tech Enthusiast</p>
+            <small style="display: block; margin-top: 1rem; font-size: 1rem; opacity: 0.9;">Haldia Institute of Technology</small>
+            <a href="#projects" class="cta-button">View My Projects</a>
+            <a href="resume.pdf" class="resume-button" target="_blank">View Resume</a>
         </div>
     </section>
 
@@ -422,7 +602,7 @@
             <div class="about-image">👨‍💻</div>
             <div class="about-text">
                 <p>
-                    Hello! I'm Subhajit Kundu, an AIML student currently studying at <strong>Hladia Institute of Technology</strong>. I'm passionate about technology and programming, with a focus on artificial intelligence and machine learning.
+                    Hello! I'm Subhajit Kundu, an AIML student currently studying at <strong>Haldia Institute of Technology</strong>. I'm passionate about technology and programming, with a focus on artificial intelligence and machine learning.
                 </p>
                 <p>
                     I'm constantly learning and exploring new technologies to build innovative solutions. My goal is to create meaningful applications using AI/ML and programming. Whether it's solving complex problems or building efficient code, I'm always up for a challenge!
@@ -439,6 +619,55 @@
                     <span class="skill-tag">Data Structures</span>
                     <span class="skill-tag">Algorithms</span>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <h2>Education</h2>
+        <div class="education-card">
+            <h3>B.Tech in Artificial Intelligence & Machine Learning</h3>
+            <p><strong>Haldia Institute of Technology</strong></p>
+            <p>Currently pursuing my undergraduate degree and building a strong foundation in programming, mathematics, and AI/ML.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project-container">
+            <div class="project-card">
+                <h3>🌐 Personal Portfolio</h3>
+                <p>A responsive personal portfolio website showcasing my education, skills, projects, and contact information.</p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a class="project-link" href="https://subha-aiml.github.io/portfolio/" target="_blank">Live Demo</a>
+            </div>
+
+            <div class="project-card">
+                <h3>🐍 Python Practice Projects</h3>
+                <p>A collection of beginner Python programs created while building my programming and problem-solving foundation.</p>
+                <div class="project-tech">
+                    <span>Python</span>
+                    <span>Problem Solving</span>
+                </div>
+                <a class="project-link" href="https://github.com/subha-aiml" target="_blank">GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>💻 C Programming Practice</h3>
+                <p>Programming exercises covering conditions, loops, switch-case, and basic problem-solving concepts.</p>
+                <div class="project-tech">
+                    <span>C</span>
+                    <span>Programming</span>
+                    <span>Logic</span>
+                </div>
+                <a class="project-link" href="https://github.com/subha-aiml" target="_blank">GitHub</a>
             </div>
         </div>
     </section>
@@ -485,17 +714,32 @@
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </div>
+
+        <div class="social-connect">
+            <h3>Connect With Me</h3>
+            <div class="social-buttons">
+                <a class="social-button" href="https://www.linkedin.com/in/subhajit-kundu-b48721440/" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon">🔵</span> LinkedIn
+                </a>
+                <a class="social-button" href="https://github.com/subha-aiml" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon">🐙</span> GitHub
+                </a>
+                <a class="social-button" href="https://www.instagram.com/darkrai_0.0/" target="_blank" rel="noopener noreferrer">
+                    <span class="social-icon">📸</span> Instagram
+                </a>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Subhajit Kundu. All rights reserved.</p>
+        <p>&copy; 2026 Subhajit Kundu. All rights reserved.</p>
         <p>Built with ❤️ and creativity</p>
         <div class="social-links">
-            <a href="#" title="LinkedIn">in</a>
-            <a href="#" title="GitHub">🐙</a>
+            <a href="https://www.linkedin.com/in/subhajit-kundu-b48721440/" target="_blank" rel="noopener noreferrer" title="LinkedIn">in</a>
+            <a href="https://github.com/subha-aiml" target="_blank" title="GitHub">🐙</a>
             <a href="#" title="Twitter">𝕏</a>
-            <a href="#" title="Instagram">📷</a>
+            <a href="https://www.instagram.com/darkrai_0.0/" target="_blank" rel="noopener noreferrer" title="Instagram">📷</a>
         </div>
     </footer>
 
